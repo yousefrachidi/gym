@@ -18,18 +18,25 @@ export default function Contact() {
           {/* Info */}
           <div className="space-y-8">
             {[
-              { icon: "📍", title: "Adresse", value: "Bouskoura, Casablanca, Maroc" },
-              { icon: "📞", title: "Téléphone", value: "+212 6XX XXX XXX" },
+              { icon: "📍", title: "Adresse", value: "Malak 4 Al Izdehar, Bouskoura 20000", link: "https://www.google.com/maps/place/Zone+fitness,+Bouskora+malak4+Al+izdehar,+Bouskoura+20000/data=!4m2!3m1!1s0xda62f2b70554b3f:0xd924add9543d97a8?utm_source=mstt_1&entry=gps&lucs=47068615,,47075915&g_ep=CAESCjExLjEwMC41MDEYACCIJyoSNDcwNjg2MTUsLDQ3MDc1OTE1QgJNQQ%3D%3D" },
+              { icon: "📱", title: "Mobile", value: "06 30-70 86 96" },
+              { icon: "📞", title: "Téléphone", value: "05 20-91 20 47" },
               {
                 icon: "🕐",
                 title: "Horaires",
-                value: "Lun – Sam : 06h00 – 22h00\nDimanche : 08h00 – 18h00",
+                value: "Ouvert 7j/7",
               },
               {
                 icon: "📸",
                 title: "Instagram",
                 value: "@zone_fitness_bouskoura",
                 link: "https://www.instagram.com/zone_fitness_bouskoura/",
+              },
+              {
+                icon: "👥",
+                title: "Facebook",
+                value: "Zone Fitness Bouskoura",
+                link: "https://www.facebook.com/people/Zone-Fitness-Bouskoura/100092977742914/?ref=NONE_xav_ig_profile_page_web#",
               },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">
