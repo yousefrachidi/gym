@@ -7,19 +7,19 @@ const testimonials = [
     quote: "Grâce aux séances personnalisées et au suivi de mon coach, j'ai perdu 15 kg, retrouvé confiance en moi et atteint un nouveau niveau de bien-être.",
     name: "Amine Belhaj",
     role: "Membre depuis 1 an",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400&q=80&auto=format&fit=crop",
   },
   {
     quote: "Zone Fitness m'a transformé. L'équipe est professionnelle, les équipements sont top et l'ambiance est incroyable. Je recommande à 100%.",
     name: "Salma Idrissi",
     role: "Membre depuis 6 mois",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80&auto=format&fit=crop",
   },
   {
     quote: "Le meilleur gym de Bouskoura sans hésitation. Les cours collectifs sont variés et les coaches sont vraiment à l'écoute de chaque membre.",
     name: "Mehdi Ouali",
     role: "Membre depuis 2 ans",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&q=80&auto=format&fit=crop",
   },
 ];
 
