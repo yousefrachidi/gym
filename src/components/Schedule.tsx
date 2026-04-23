@@ -1,6 +1,8 @@
+type Slot = { cours: string; coach: string; color: string; note?: string };
+
 const times = ["10H30", "13H00", "15H00", "17H00", "18H30", "19H00", "20H00"];
 
-const days = [
+const days: { label: string; slots: Partial<Record<string, Slot>> }[] = [
   { label: "LUNDI", slots: {
     "10H30": { cours: "CROSSFIT", coach: "HAMID", color: "hamid" },
     "17H00": { cours: "ABDO", coach: "AZZEDDINE", color: "azzeddine" },
