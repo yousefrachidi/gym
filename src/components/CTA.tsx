@@ -11,7 +11,7 @@ export default function CTA() {
       />
       <div className="absolute inset-0 bg-black/70" />
       <div className="relative z-10 text-center px-4">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-6">
           Obtiens une consultation
           <br />
           <span className="text-[#b5cc2e]">gratuite maintenant !</span>
@@ -21,7 +21,7 @@ export default function CTA() {
         </p>
         <a
           href="#contact"
-          className="inline-block bg-[#b5cc2e] hover:bg-[#a0b828] text-black font-bold px-10 py-4 rounded-lg text-lg transition-all hover:scale-105"
+          className="inline-block bg-[#b5cc2e] hover:bg-[#a0b828] text-black font-bold px-6 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all hover:scale-105"
         >
           Rejoindre maintenant
         </a>

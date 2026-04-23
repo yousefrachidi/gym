@@ -58,32 +58,40 @@ const coachColor: Record<string, string> = {
   aymane:    "text-[#7090e8]",
 };
 
+const badgeColor: Record<string, string> = {
+  hamid:     "bg-[#1a6eb5]",
+  azzeddine: "bg-[#3dba3d]",
+  yassine:   "bg-[#e07820]",
+  aymane:    "bg-[#4a6ee0]",
+};
+
 export default function Schedule() {
   return (
-    <section id="schedule" className="py-24 bg-[#111111]">
+    <section id="schedule" className="py-16 sm:py-24 bg-[#111111]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <span className="text-[#b5cc2e] text-xs font-bold uppercase tracking-widest">Planning</span>
-          <h2 className="text-4xl sm:text-5xl font-black mt-2">Planning des cours collectifs</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mt-2">Planning des cours collectifs</h2>
         </div>
 
         {/* Legend */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
           {[
             { label: "HAMID", color: "bg-[#1a6eb5]" },
             { label: "AZZEDDINE", color: "bg-[#3dba3d]" },
             { label: "YASSINE", color: "bg-[#e07820]" },
-            { label: "AYMANE / AYMENE", color: "bg-[#4a6ee0]" },
+            { label: "AYMANE", color: "bg-[#4a6ee0]" },
           ].map((c) => (
-            <div key={c.label} className="flex items-center gap-2 text-xs text-gray-400">
-              <span className={`w-3 h-3 rounded-sm ${c.color}`} />
+            <div key={c.label} className="flex items-center gap-1.5 text-xs text-gray-400">
+              <span className={`w-2.5 h-2.5 rounded-sm ${c.color}`} />
               {c.label}
             </div>
           ))}
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/10">
-          <table className="w-full min-w-[800px]">
+        {/* Desktop table */}
+        <div className="hidden md:block overflow-x-auto rounded-2xl border border-white/10">
+          <table className="w-full min-w-[700px]">
             <thead>
               <tr className="bg-[#1a4a7a]">
                 <th className="py-4 px-4 text-left text-sm font-bold text-white w-28"></th>
@@ -95,13 +103,13 @@ export default function Schedule() {
             <tbody>
               {days.map((day, i) => (
                 <tr key={day.label} className={`border-t border-white/10 ${i % 2 === 0 ? "bg-[#0d0d0d]" : "bg-[#111111]"}`}>
-                  <td className="py-3 px-4">
-                    <span className="text-xs font-black text-white bg-[#1a4a7a] px-3 py-1.5 rounded-lg block text-center">
+                  <td className="py-3 px-3">
+                    <span className="text-xs font-black text-white bg-[#1a4a7a] px-2 py-1.5 rounded-lg block text-center">
                       {day.label}
                     </span>
                   </td>
                   {times.map((time) => {
-                    const slot = day.slots[time as keyof typeof day.slots];
+                    const slot = day.slots[time];
                     return (
                       <td key={time} className="py-2 px-1.5 text-center">
                         {slot ? (
@@ -120,6 +128,35 @@ export default function Schedule() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile cards */}
+        <div className="md:hidden space-y-4">
+          {days.map((day) => {
+            const daySlots = Object.entries(day.slots) as [string, Slot][];
+            if (daySlots.length === 0) return null;
+            return (
+              <div key={day.label} className="bg-[#1a1a1a] border border-white/10 rounded-2xl overflow-hidden">
+                <div className="bg-[#1a4a7a] px-4 py-3">
+                  <h3 className="text-white font-black text-sm tracking-widest">{day.label}</h3>
+                </div>
+                <div className="p-3 grid grid-cols-2 gap-2">
+                  {daySlots.map(([time, slot]) => (
+                    <div key={time} className={`${colorMap[slot.color]} rounded-xl p-3`}>
+                      <div className="flex items-center gap-1.5 mb-1">
+                        <span className={`w-1.5 h-1.5 rounded-full ${badgeColor[slot.color]}`} />
+                        <p className="text-gray-300 text-xs font-semibold">
+                          {slot.note ? slot.note : time}
+                        </p>
+                      </div>
+                      <p className="text-white text-sm font-black leading-tight">{slot.cours}</p>
+                      <p className={`text-xs font-bold mt-0.5 ${coachColor[slot.color]}`}>{slot.coach}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

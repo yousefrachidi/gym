@@ -73,9 +73,9 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl p-8 flex flex-col transition-all ${
+              className={`relative rounded-2xl p-6 sm:p-8 flex flex-col transition-all ${
                 plan.highlighted
-                  ? "bg-[#b5cc2e] scale-105 shadow-2xl shadow-[#b5cc2e]/20"
+                  ? "bg-[#b5cc2e] md:scale-105 shadow-2xl shadow-[#b5cc2e]/20"
                   : "bg-[#1a1a1a] border border-white/5 hover:border-[#b5cc2e]/30"
               }`}
             >
@@ -95,7 +95,7 @@ export default function Pricing() {
                   {plan.description}
                 </p>
                 <div className="flex items-end gap-1 mb-1">
-                  <span className={`text-5xl font-black ${plan.highlighted ? "text-black" : "text-white"}`}>
+                  <span className={`text-4xl sm:text-5xl font-black ${plan.highlighted ? "text-black" : "text-white"}`}>
                     {plan.price}
                   </span>
                   <span className={`text-sm mb-2 ${plan.highlighted ? "text-black/60" : "text-gray-400"}`}>
@@ -144,7 +144,7 @@ export default function Pricing() {
             </div>
           </div>
           <div className="text-center sm:text-right flex-shrink-0">
-            <p className="text-5xl font-black text-white">3 400 <span className="text-2xl text-gray-400">DH</span></p>
+            <p className="text-4xl sm:text-5xl font-black text-white">3 400 <span className="text-xl sm:text-2xl text-gray-400">DH</span></p>
             <p className="text-[#b5cc2e] text-sm font-semibold mt-1">soit 1 700 DH / personne</p>
             <a
               href="#contact"

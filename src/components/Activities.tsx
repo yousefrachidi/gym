@@ -40,7 +40,7 @@ export default function Activities() {
         {/* 3 photo cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {classes.map((c) => (
-            <div key={c.title} className="relative h-96 rounded-2xl overflow-hidden group cursor-pointer">
+            <div key={c.title} className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden group cursor-pointer">
               <Image
                 src={c.img}
                 alt={c.title}

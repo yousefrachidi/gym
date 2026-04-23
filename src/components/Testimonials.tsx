@@ -58,7 +58,7 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Photo */}
-          <div className="relative h-80 sm:h-96 rounded-2xl overflow-hidden">
+          <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden">
             <Image
               src={t.img}
               alt={t.name}
@@ -71,7 +71,7 @@ export default function Testimonials() {
           {/* Quote */}
           <div>
             <div className="text-6xl text-[#b5cc2e] font-black mb-4 leading-none">"</div>
-            <p className="text-xl text-gray-200 leading-relaxed mb-8">
+            <p className="text-base sm:text-xl text-gray-200 leading-relaxed mb-8">
               {t.quote}
             </p>
             <div>

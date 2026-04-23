@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contacter sur WhatsApp"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group"
     >
       {/* Pulse ring */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping" />
@@ -25,7 +25,7 @@ export default function WhatsAppButton() {
       </span>
 
       {/* Tooltip on hover */}
-      <span className="absolute right-16 bottom-3 bg-white text-black text-xs font-semibold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      <span className="hidden sm:block absolute right-16 bottom-3 bg-white text-black text-xs font-semibold px-3 py-1.5 rounded-full shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
         Chatter sur WhatsApp
       </span>
     </a>

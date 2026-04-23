@@ -4,7 +4,7 @@ const trainers = [
   {
     name: "Coach Hamid",
     role: "CrossFit · Tabata · Cardio · RMG",
-    img: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80&auto=format&fit=crop",
+    img: "/coach-hamid.jpg",
     instagram: "https://www.instagram.com/coachhamid1/",
   },
   {
